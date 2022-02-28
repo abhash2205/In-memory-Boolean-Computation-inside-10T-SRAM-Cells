@@ -4,7 +4,7 @@ The von Neumann computing architecture has been the workhorse for virtually all 
 ## Keywords
 von Neumann, in-memory computing, SRAM cells.
 ## Tools Used
-The <a href="https://www.synopsys.com/implementation-and-signoff/custom-design-platform/custom-compiler.html"> synopsis custom compiler </a> tool have been used to design and characterize all the design presented below. The Synopsys Custom Compiler<sup>TM</sup> design environment is a modern solution for full-custom analog, custom digital, and mixed-signal IC design. Figure below shows the home page view of Synopsys custom compiler tool. The 28nm PDK were used to design and simulate design.
+The [synopsis custom compiler](https://www.synopsys.com/implementation-and-signoff/custom-design-platform/custom-compiler.html) tool have been used to design and characterize all the design presented below. The Synopsys Custom Compiler<sup>TM</sup> design environment is a modern solution for full-custom analog, custom digital, and mixed-signal IC design. Figure below shows the home page view of Synopsys custom compiler tool. The 28nm PDK were used to design and simulate design.
 ![Custom_Compiler_Home](https://user-images.githubusercontent.com/100511409/155947739-f430ed95-9f5e-4630-835d-4eca5d2cf001.PNG)
 ## 1. Introduction
 The von-Neumann architecture [1], characterized by different computing cores and memory storage, widely covers a wide range of computer architecture used in today’s 
