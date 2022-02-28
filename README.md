@@ -236,13 +236,13 @@ As discussed earlier for simulation of all the possible 4 cases of 2 input in-me
 + v(qb2)=0  v(~qb2)=1.05  v(rbl_10)=1.05  v(qa3)=1.05  v(~qa3)=0  v(qb3)=1.05
 + v(~qb3)=0  v(rbl_11)=1.05
 ```
-which corresponds to 4 test cases and the corresponding, initially pre-charged read bit lines (RBLs):
-```
-1. A = 0; B = 0; V<sub>RBL</sub> = 1; ==>> v(qa0)=0  v(~qa0)=1.05  v(qb0)=0  v(~qb0)=1.05  v(rbl_00)=1.05
-2. A = 0; B = 1; V<sub>RBL</sub> = 1; ==>> v(qa1)=0  v(~qa1)=1.05  v(qb1)=1.05  v(~qb1)=0  v(rbl_01)=1.05
-3. A = 1; B = 0; V<sub>RBL</sub> = 1; ==>> v(qa2)=1.05  v(~qa2)=0  v(qb2)=0  v(~qb2)=1.05  v(rbl_10)=1.05
-4. A = 1; B = 1; V<sub>RBL</sub> = 1; ==>> v(qa3)=1.05  v(~qa3)=0  v(qb3)=1.05  v(~qb3)=0  v(rbl_11)=1.05
-```
+which corresponds to 4 test cases and the corresponding, initially pre-charged read bit lines (RBLs): <br>
+
+1. A = 0; B = 0; V<sub>RBL</sub> = 1; ==>> v(qa0)=0  v(~qa0)=1.05  v(qb0)=0  v(~qb0)=1.05  v(rbl_00)=1.05 <br>
+2. A = 0; B = 1; V<sub>RBL</sub> = 1; ==>> v(qa1)=0  v(~qa1)=1.05  v(qb1)=1.05  v(~qb1)=0  v(rbl_01)=1.05 <br>
+3. A = 1; B = 0; V<sub>RBL</sub> = 1; ==>> v(qa2)=1.05  v(~qa2)=0  v(qb2)=0  v(~qb2)=1.05  v(rbl_10)=1.05 <br>
+4. A = 1; B = 1; V<sub>RBL</sub> = 1; ==>> v(qa3)=1.05  v(~qa3)=0  v(qb3)=1.05  v(~qb3)=0  v(rbl_11)=1.05 <br>
+
 ### 3.3. Reference Waveforms
 Fig. 5. below shows the waveform we are intended to implement on Synopsys custom compiler tools.
 ![Fig5](https://user-images.githubusercontent.com/100511409/155942924-80476fe9-42ac-42e0-ac7a-233453f4ee39.PNG)
