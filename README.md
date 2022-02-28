@@ -33,10 +33,10 @@ world. This leads to the in famous von-Neumann bottleneck problem [2] while driv
 <br>[--> back to top](#contents)
 ## 2. In Memory Computations In 8T SRAM Cells
 The hierarchical design approach have been adopted to design the 8T SRAM cell array. So, first 6T SRAM cell have been designed, as shown in Fig. 1 below, followed by generation of its block diagram which was used to build 8T SRAM cell. 
-![Fig1](https://user-images.githubusercontent.com/100511409/155936628-4048ee51-d1d2-434e-85c3-d7dd01f4d7de.png)
+![Fig1](https://user-images.githubusercontent.com/100511409/155936628-4048ee51-d1d2-434e-85c3-d7dd01f4d7de.png)<br>
 _Fig. 1 (a) Traditional 6T SRAM cell and (b) its corrersponding block diagram._ <br>
 Figure 2 shows the traditional 8T SRAM, which is a combination of 6T cell with additional port for read operation. It has same write operation as 6T SRAM cell. For read operation, initially, RBL is pre-charged which discharges only if Q = ‘1’ during read operation, where, RWL is pulled ‘1’ (while WWL is kept ‘0’).
-![Fig2](https://user-images.githubusercontent.com/100511409/155937148-da2593cd-dd05-46a2-b924-3c4a1062224f.png)
+![Fig2](https://user-images.githubusercontent.com/100511409/155937148-da2593cd-dd05-46a2-b924-3c4a1062224f.png)<br>
 _Fig. 2 (a) 2 (rows) x 1 (columns) 8T SRAM cells array, and (b) its corrersponding block diagram. A and B denotes two operands (logic variables) stored in the bit-cell array._
 <br>[--> back to top](#contents)
 ### 2.1. In-Memory NOR/NAND Operation 
@@ -44,7 +44,7 @@ The output of: 1) NOR operation is ‘1’ only if both the inputs are ‘0’, 
 <br>[--> back to top](#contents)
 ## 3. Simulation Results
 We here have implemented 2 input NAND/NOR gate within memory. So, for test bench, a total number of four cases are required to completely characterize the design. For that, 2 (rows) x 4 (columns) SRAM bit cell array were design as shown in Fig. 4 below. Each of the columns were initialized with initial conditions-- 00, 01, 10, and 11 respectively.
-![4_SRAM_8T_2x8_BCA_sch](https://user-images.githubusercontent.com/100511409/155938640-9a21adbf-e8e7-440f-bce0-ffdd1ea372b2.PNG)
+![4_SRAM_8T_2x8_BCA_sch](https://user-images.githubusercontent.com/100511409/155938640-9a21adbf-e8e7-440f-bce0-ffdd1ea372b2.PNG)<br>
 _Fig. 4. 2 (rows) x 4 (columns) SRAM bit cell array._
 <br>[--> back to top](#contents)
 ### 3.1. Netlist
@@ -253,16 +253,16 @@ which corresponds to 4 test cases and the corresponding, initially pre-charged r
 <br>[--> back to top](#contents)
 ### 3.3. Reference Waveforms
 Fig. 5. below shows the waveform we are intended to implement on Synopsys custom compiler tools.
-![Fig5](https://user-images.githubusercontent.com/100511409/155942924-80476fe9-42ac-42e0-ac7a-233453f4ee39.PNG)
+![Fig5](https://user-images.githubusercontent.com/100511409/155942924-80476fe9-42ac-42e0-ac7a-233453f4ee39.PNG)<br>
 _Fig. 5. Output waveforms of (a) NAND output; and (b) NOR output._
 <br>[--> back to top](#contents)
 ### 3.4. Simulated Waveforms
 The circuits were simulated using [PrimeWave Design Environment](https://www.synopsys.com/implementation-and-signoff/ams-simulation/primewave.html). PrimeWave<sup>TM</sup> Design Environment is a comprehensive and flexible environment for simulation setup and analysis of analog, RF, mixed-signal design, custom-digital and memory designs within the Synopsys Custom Design Platform. The simulated waveforms (in Fig. 6 and Fig. 7 below) clearly shows that the simulated output matches with the reference waveforms. The output of four cases are obtained at respective column lines denoted by-- RBL_00, RBL_01, RBL_10, and RBL_11 in Fig. 6 and Fig. 7.
 #### 3.4.1. NAND output
-![NAND_Output](https://user-images.githubusercontent.com/100511409/155945691-0fb76485-c72e-403c-99f6-1f6f2a16bfa9.PNG)
+![NAND_Output](https://user-images.githubusercontent.com/100511409/155945691-0fb76485-c72e-403c-99f6-1f6f2a16bfa9.PNG)<br>
 _Fig. 6. NAND output simulated in Synopsys Custom Compiler._
 #### 3.4.2. NOR output
-![NOR_Output](https://user-images.githubusercontent.com/100511409/155943103-c3319615-4c2b-4bb8-a385-bc1c3a05f3ca.PNG)
+![NOR_Output](https://user-images.githubusercontent.com/100511409/155943103-c3319615-4c2b-4bb8-a385-bc1c3a05f3ca.PNG)<br>
 _Fig. 7. NOR output simulated in Synopsys Custom Compiler._
 <br>[--> back to top](#contents)
 ## 4. Acknowledgement 
