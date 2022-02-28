@@ -3,20 +3,20 @@
 [Abstract](#abstract)<br>
 [Keywords](#keywords)<br>
 [Tools Used](#tools-used)<br>
-1. [Introduction]()<br>
-2. [In Memory Computations In 8T SRAM Cells]()<br>
-  -2.1. [In-Memory NOR/NAND Operation]()<br>
-3. [Simulation Results]()<br>
-  -3.1. [Netlist]()<br>
-    -3.1.1. [NAND netlist]()<br>
---3.1.2. [NOR netlist]()<br>
--3.2. [Initial Conditions]()<br>
--3.3. [Reference Waveforms]()<br>
--3.4. [Simulated Waveforms]()<br>
---3.4.1. [NAND output]()<br>
---3.4.2. [NOR output]()<br>
-4. [Acknowledgement]()<br>
-5. [References]()<br>
+1. [Introduction](#1-introduction)<br>
+2. [In Memory Computations In 8T SRAM Cells](#2-in-memory-computations-in-8t-sram-cells)<br>
+  -2.1. [In-Memory NOR/NAND Operation](#21-in-memory-nornand-operation)<br>
+3. [Simulation Results](#3-simulation-results)<br>
+  -3.1. [Netlist](#31-netlist)<br>
+    -3.1.1. [NAND netlist](#311-nand-netlist)<br>
+--3.1.2. [NOR netlist](#312-nor-netlist)<br>
+-3.2. [Initial Conditions](#32-initial-conditions)<br>
+-3.3. [Reference Waveforms](#33-reference-waveforms)<br>
+-3.4. [Simulated Waveforms](#34-simulated-waveforms)<br>
+--3.4.1. [NAND output](#341-nand-output)<br>
+--3.4.2. [NOR output](#342-nor-output)<br>
+4. [Acknowledgement](#4-acknowledgement)<br>
+5. [References](#5-references)<br>
 ## Abstract
 The von Neumann computing architecture has been the workhorse for virtually all the computing systems for last several decades. However, it faces serious issues of memory wall problem with the ever increasing demand of data intensive computing systems. To mitigate this bottleneck, one of the approach that researchers have come up is to enable in-memory Boolean computation. In this work, we will present the circuits and underlying principle behind in-memory computation inside SRAM cells.
 ## Keywords
