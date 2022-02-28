@@ -1,9 +1,9 @@
 # In-memory-Boolean-Computation-inside-10T-SRAM-Cells
 ## Contents
-[Abstract]()<br>
-[Keywords]()<br>
-[Tools Used]()<br>
-1. [Introduction](#1. Introduction)<br>
+[Abstract](#abstract)<br>
+[Keywords](#keywords)<br>
+[Tools Used](#tools-used)<br>
+1. [Introduction]()<br>
 2. [In Memory Computations In 8T SRAM Cells]()<br>
   -2.1. [In-Memory NOR/NAND Operation]()<br>
 3. [Simulation Results]()<br>
