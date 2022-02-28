@@ -1,4 +1,4 @@
-# In-memory-Boolean-Computation-inside-10T-SRAM-Cells
+# In-memory-Boolean-Computation-inside-8T-SRAM-Cells
 ## Contents
 [Abstract](#abstract)<br>
 [Keywords](#keywords)<br>
