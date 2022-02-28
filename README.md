@@ -1,4 +1,22 @@
 # In-memory-Boolean-Computation-inside-10T-SRAM-Cells
+## Contents
+[Abstract]()<br>
+[Keywords]()<br>
+[Tools Used]()<br>
+1. [Introduction](#1. Introduction)<br>
+2. [In Memory Computations In 8T SRAM Cells]()<br>
+  -2.1. [In-Memory NOR/NAND Operation]()<br>
+3. [Simulation Results]()<br>
+  -3.1. [Netlist]()<br>
+    -3.1.1. [NAND netlist]()<br>
+--3.1.2. [NOR netlist]()<br>
+-3.2. [Initial Conditions]()<br>
+-3.3. [Reference Waveforms]()<br>
+-3.4. [Simulated Waveforms]()<br>
+--3.4.1. [NAND output]()<br>
+--3.4.2. [NOR output]()<br>
+4. [Acknowledgement]()<br>
+5. [References]()<br>
 ## Abstract
 The von Neumann computing architecture has been the workhorse for virtually all the computing systems for last several decades. However, it faces serious issues of memory wall problem with the ever increasing demand of data intensive computing systems. To mitigate this bottleneck, one of the approach that researchers have come up is to enable in-memory Boolean computation. In this work, we will present the circuits and underlying principle behind in-memory computation inside SRAM cells.
 ## Keywords
@@ -230,7 +248,7 @@ Fig. 5. below shows the waveform we are intended to implement on Synopsys custom
 ![Fig5](https://user-images.githubusercontent.com/100511409/155942924-80476fe9-42ac-42e0-ac7a-233453f4ee39.PNG)
 _Fig. 5. Output waveforms of (a) NAND output; and (b) NOR output._
 ### 3.4. Simulated Waveforms
-The circuits were simulated using <a href="https://www.synopsys.com/implementation-and-signoff/ams-simulation/primewave.html"> PrimeWave Design Environment </a>. PrimeWave<sup>TM</sup> Design Environment is a comprehensive and flexible environment for simulation setup and analysis of analog, RF, mixed-signal design, custom-digital and memory designs within the Synopsys Custom Design Platform. The simulated waveforms (in Fig. 6 and Fig. 7 below) clearly shows that the simulated output matches with the reference waveforms. The output of four cases are obtained at respective column lines denoted by-- RBL_00, RBL_01, RBL_10, and RBL_11 in Fig. 6 and Fig. 7.
+The circuits were simulated using [PrimeWave Design Environment](https://www.synopsys.com/implementation-and-signoff/ams-simulation/primewave.html). PrimeWave<sup>TM</sup> Design Environment is a comprehensive and flexible environment for simulation setup and analysis of analog, RF, mixed-signal design, custom-digital and memory designs within the Synopsys Custom Design Platform. The simulated waveforms (in Fig. 6 and Fig. 7 below) clearly shows that the simulated output matches with the reference waveforms. The output of four cases are obtained at respective column lines denoted by-- RBL_00, RBL_01, RBL_10, and RBL_11 in Fig. 6 and Fig. 7.
 #### 3.4.1. NAND output
 ![NAND_Output](https://user-images.githubusercontent.com/100511409/155945691-0fb76485-c72e-403c-99f6-1f6f2a16bfa9.PNG)
 _Fig. 6. NAND output simulated in Synopsys Custom Compiler._
@@ -238,10 +256,10 @@ _Fig. 6. NAND output simulated in Synopsys Custom Compiler._
 ![NOR_Output](https://user-images.githubusercontent.com/100511409/155943103-c3319615-4c2b-4bb8-a385-bc1c3a05f3ca.PNG)
 _Fig. 7. NOR output simulated in Synopsys Custom Compiler._
 ## 4. Acknowledgement 
-<a href="https://hackathoniith.in/"> Cloud Based Analog IC design Hackathon </a>:<br> 
-conducted by:<a href="https://iith.ac.in/"> Indian Institute of Technology Hyderabad </a>; <a href="https://www.meity.gov.in/"> Ministry of Electronics and Information Technology </a> <br>
-sponsored by:<a href="https://www.synopsys.com/"> Synopsys </a>; <br>
-in association with:<a href="https://www.vlsisystemdesign.com/"> VLSI System Design </a>. <br><br>
+[Cloud Based Analog IC design Hackathon](https://hackathoniith.in/):<br> 
+conducted by: [Indian Institute of Technology Hyderabad](https://iith.ac.in/); [Ministry of Electronics and Information Technology](https://www.meity.gov.in/)<br>
+sponsored by: [Synopsys](https://www.synopsys.com/); <br>
+in association with: [VLSI System Design](https://www.vlsisystemdesign.com/). <br><br>
 Special Thanks to:<br>
 Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.; <br>
 Chinmay panda, IIT Hyderabad; and <br>
