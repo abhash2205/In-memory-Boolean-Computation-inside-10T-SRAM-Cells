@@ -19,18 +19,18 @@
 5. [References](#5-references)<br>
 ## Abstract 
 The von Neumann computing architecture has been the workhorse for virtually all the computing systems for last several decades. However, it faces serious issues of memory wall problem with the ever increasing demand of data intensive computing systems. To mitigate this bottleneck, one of the approach that researchers have come up is to enable in-memory Boolean computation. In this work, we will present the circuits and underlying principle behind in-memory computation inside SRAM cells.
-<br>[--> back to top](#contents)
+<br>[🠉 Back to top](#contents)
 ## Keywords
 von Neumann, in-memory computing, SRAM cells.
-<br>[--> back to top](#contents)
+<br>[🠉 Back to top](#contents)
 ## Tools Used
 The [synopsis custom compiler](https://www.synopsys.com/implementation-and-signoff/custom-design-platform/custom-compiler.html) tool have been used to design and characterize all the design presented below. The Synopsys Custom Compiler<sup>TM</sup> design environment is a modern solution for full-custom analog, custom digital, and mixed-signal IC design. Figure below shows the home page view of Synopsys custom compiler tool. The 28nm PDK were used to design and simulate design.
 ![Custom_Compiler_Home](https://user-images.githubusercontent.com/100511409/155947739-f430ed95-9f5e-4630-835d-4eca5d2cf001.PNG) 
-<br>[--> back to top](#contents)
+<br>[🠉 Back to top](#contents)
 ## 1. Introduction
 The von-Neumann architecture [1], characterized by different computing cores and memory storage, widely covers a wide range of computer architecture used in today’s 
 world. This leads to the in famous von-Neumann bottleneck problem [2] while driving data intensive tasks such artificial intelligence, neural networks, etc. on chip. This is due to repeated and huge data relocation between computing and memory cores which are at physically separate location on the chip. This leads to both latency and large energy overheads limiting the throughput of the system.
-<br>[--> back to top](#contents)
+<br>[🠉 Back to top](#contents)
 ## 2. In Memory Computations In 8T SRAM Cells
 The hierarchical design approach have been adopted to design the 8T SRAM cell array. So, first 6T SRAM cell have been designed, as shown in Fig. 1 below, followed by generation of its block diagram which was used to build 8T SRAM cell. 
 ![Fig1](https://user-images.githubusercontent.com/100511409/155936628-4048ee51-d1d2-434e-85c3-d7dd01f4d7de.png)<br>
@@ -38,15 +38,15 @@ _Fig. 1 (a) Traditional 6T SRAM cell and (b) its corrersponding block diagram._ 
 Figure 2 shows the traditional 8T SRAM, which is a combination of 6T cell with additional port for read operation. It has same write operation as 6T SRAM cell. For read operation, initially, RBL is pre-charged which discharges only if Q = ‘1’ during read operation, where, RWL is pulled ‘1’ (while WWL is kept ‘0’).
 ![Fig2](https://user-images.githubusercontent.com/100511409/155937148-da2593cd-dd05-46a2-b924-3c4a1062224f.png)<br>
 _Fig. 2 (a) 2 (rows) x 1 (columns) 8T SRAM cells array, and (b) its corrersponding block diagram. A and B denotes two operands (logic variables) stored in the bit-cell array._
-<br>[--> back to top](#contents)
+<br>[🠉 Back to top](#contents)
 ### 2.1. In-Memory NOR/NAND Operation 
 The output of: 1) NOR operation is ‘1’ only if both the inputs are ‘0’, and; 2) NAND operation is ‘0’ iff both the inputs are ‘1’. Now, think upon the activating of two RWLs simultaneously, corresponding to the two rows storing vector operands ‘A’ and ‘B’, respectively. The initially pre-charged RBL line retains its charge if and only if both the operands bits QA and QB are ‘0’. Thus, we get the ‘wire NORed’ operation just by activating the RWLs, corresponding to two rows storing operands ‘A’ and ‘B’. Next, the value of QA and QB would strongly influence the fall time of the RBL voltage from the pre-charged value to 0V. This can be exploited by intelligently signalling the RWL line such that the RBL voltage does not goes down to zero completely when operands are ‘01/10’. This generates a voltage level difference on RBL line in the two cases (‘01/10’ and ‘11’) which can be passed through voltage comparator (having threshold voltage—VTH, as shown in Fig. 2) togenerate output as logic ‘0’ or ‘1’. Thus, the output can be ‘wire NANDed’.
-<br>[--> back to top](#contents)
+<br>🠉 Back to top](#contents)
 ## 3. Simulation Results
 We here have implemented 2 input NAND/NOR gate within memory. So, for test bench, a total number of four cases are required to completely characterize the design. For that, 2 (rows) x 4 (columns) SRAM bit cell array were design as shown in Fig. 4 below. Each of the columns were initialized with initial conditions-- 00, 01, 10, and 11 respectively.
 ![4_SRAM_8T_2x8_BCA_sch](https://user-images.githubusercontent.com/100511409/155938640-9a21adbf-e8e7-440f-bce0-ffdd1ea372b2.PNG)<br>
 _Fig. 4. 2 (rows) x 4 (columns) SRAM bit cell array._
-<br>[--> back to top](#contents)
+<br>[🠉 Back to top](#contents)
 ### 3.1. Netlist
 The final netlist (of 2 (rows) x 4 (columns) SRAM bit cell array) generated after design are presented below. <br>
 #### 3.1.1. NAND netlist: 
@@ -235,7 +235,7 @@ v36 rwla_and_rwlb gnd! dc=0 pwl ( 0 0.0 5n 0 5.1n 1.05 6.4n 1.05 6.5n 0.0 td=0 )
 
 .end
 ```
-<br>[--> back to top](#contents)
+<br>[🠉 Back to top](#contents)
 ### 3.2. Initial Conditions
 As discussed earlier for simulation of all the possible 4 cases of 2 input in-memory NAND/NOR implementation, the corresponding test benches have been created by assigning initial conditions to the bits stored in SRAM bit cell array of Fig. 4. These initial conditions are shown below:
 ```
@@ -250,12 +250,12 @@ which corresponds to 4 test cases and the corresponding, initially pre-charged r
 2. A = 0; B = 1; V<sub>RBL</sub> = 1; ==>> v(qa1)=0  v(~qa1)=1.05  v(qb1)=1.05  v(~qb1)=0  v(rbl_01)=1.05 <br>
 3. A = 1; B = 0; V<sub>RBL</sub> = 1; ==>> v(qa2)=1.05  v(~qa2)=0  v(qb2)=0  v(~qb2)=1.05  v(rbl_10)=1.05 <br>
 4. A = 1; B = 1; V<sub>RBL</sub> = 1; ==>> v(qa3)=1.05  v(~qa3)=0  v(qb3)=1.05  v(~qb3)=0  v(rbl_11)=1.05 <br>
-<br>[--> back to top](#contents)
+<br>[🠉 Back to top](#contents)
 ### 3.3. Reference Waveforms
 Fig. 5. below shows the waveform we are intended to implement on Synopsys custom compiler tools.
 ![Fig5](https://user-images.githubusercontent.com/100511409/155942924-80476fe9-42ac-42e0-ac7a-233453f4ee39.PNG)<br>
 _Fig. 5. Output waveforms of (a) NAND output; and (b) NOR output._
-<br>[--> back to top](#contents)
+<br>[🠉 Back to top](#contents)
 ### 3.4. Simulated Waveforms
 The circuits were simulated using [PrimeWave Design Environment](https://www.synopsys.com/implementation-and-signoff/ams-simulation/primewave.html). PrimeWave<sup>TM</sup> Design Environment is a comprehensive and flexible environment for simulation setup and analysis of analog, RF, mixed-signal design, custom-digital and memory designs within the Synopsys Custom Design Platform. The simulated waveforms (in Fig. 6 and Fig. 7 below) clearly shows that the simulated output matches with the reference waveforms. The output of four cases are obtained at respective column lines denoted by-- RBL_00, RBL_01, RBL_10, and RBL_11 in Fig. 6 and Fig. 7.
 #### 3.4.1. NAND output
@@ -264,7 +264,7 @@ _Fig. 6. NAND output simulated in Synopsys Custom Compiler._
 #### 3.4.2. NOR output
 ![NOR_Output](https://user-images.githubusercontent.com/100511409/155943103-c3319615-4c2b-4bb8-a385-bc1c3a05f3ca.PNG)<br>
 _Fig. 7. NOR output simulated in Synopsys Custom Compiler._
-<br>[--> back to top](#contents)
+<br>[🠉 Back to top](#contents)
 ## 4. Acknowledgement 
 [Cloud Based Analog IC design Hackathon](https://hackathoniith.in/):<br> 
 conducted by: [Indian Institute of Technology Hyderabad](https://iith.ac.in/); [Ministry of Electronics and Information Technology](https://www.meity.gov.in/)<br>
@@ -274,7 +274,7 @@ Special Thanks to:<br>
 Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.; <br>
 Chinmay panda, IIT Hyderabad; and <br>
 Sameer Durgoji, NIT Karnataka
-<br>[--> back to top](#contents)
+<br>[🠉 Back to top](#contents)
 ## 5. References
 [1] Wei, Shaojun. "Reconfigurable computing-evolution of Von Neumann architecture." 2010 International Conference on Field-Programmable Technology. IEEE, 2010. <br>
 [2] J. Backus, “Can programming be liberated from the von Neumann style?: A functional style and its algebra of programs,” Commun. ACM, vol. 21, no. 8, pp. 613–641, Aug. 1978. <br>
